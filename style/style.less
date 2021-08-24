@@ -24,17 +24,20 @@ body {
     padding: 25px;
     border: 10px solid white;
     background-color: rgb(68, 122, 221);
+    h2 {
+        text-align: center;
+        font-size: 20px;
+        font-weight: 400;
+        margin: 0;
+        padding: 0;
+    }
 }
 
 .intro {
     text-align: center;
     img {
         max-width: 150px;
-    }
-    h2 {
-        text-align: center;
-        font-size: 20px;
-        font-weight: 400;
+        margin-bottom: 20px;
     }
     p {
         text-align: left;
@@ -45,9 +48,47 @@ form {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    label {
+        width: 100%;
+    }
+    input[type="text"], 
+    input[type="password"], 
+    input[type="email"], 
+    input[type="date"],
+    textarea {
+        width: 100%;
+        padding: 5px;
+        font-size: 15px;
+        border: none;
+        outline: none;
+        font-family: 'Poppins', sans-serif;
+    }
+    input[type="submit"] {
+        cursor: pointer;
+        border: none;
+        outline: none;
+        width: 120px;
+        padding: 10px;
+        color: white;
+        background-color: black;
+        border-radius: 3px;
+        float: right;
+    }
+    textarea {
+        resize: none;
+    }
 }
 
-@media(max-width: 768px) {
+#consent-container {
+    font-size: 10px;
+    margin-top: 8px;
+}
+
+.part {
+    margin-bottom: 20px;
+}
+
+@media(max-width: 920px) {
     .col {
         width: 100%;
     }

@@ -22,12 +22,51 @@
 
             <!-- Second column -->
             <div class="col">
+                <h2>Ustawienia</h2>
 
+                <div class="name part">
+                    <label for="name" class="required">Imię:</label>
+                    <input type="text" placeholder="Proszę wpisać swoje imię" name="name" id="name" required title="Prosze podać imię">
+                </div>
+
+                <div class="email part">
+                    <label for="email" class="required">E-mail:</label>
+                    <input type="email" placeholder="nazwa@domena.pl" name="email" id="email" required>
+                </div>
+
+                <div class="password part">
+                    <label for="password" class="required">Hasło:</label>
+                    <input type="password" name="password" id="password" required>
+                </div>
+
+                <div class="password part">
+                    <label for="conf-password" class="required">Hasło:</label>
+                    <input type="password" name="conf-password" id="conf-password" required>
+                </div>
             </div>
 
             <!-- Third column -->
             <div class="col">
+                <h2>Profil</h2>
 
+                <div class="birthday part">
+                    <label for="birthday">Data urodzenia:</label>
+                    <input type="date" name="birthday" id="birthday" placeholder="rrrr-mm-dd" required>
+                    <div id="consent-container" class="hide">
+                        <input type="checkbox" name="parent-consent" id="parent-consent">
+                        <label for="parent-consent">Aby się zapisać, musisz mieć zgodę rodziców. Zaznacz to pole, jeśli zgadzasz się na zapisanie dziecka:</label>
+                    </div>
+                </div>
+
+                <div class="bio part">
+                    <label for="bio">Krótko o sobie (maksymalnie 140 znaków):</label>
+                    <textarea maxlength="140" name="bio" id="bio" cols="30" rows="10"></textarea>
+                    <span id="bio" class="hide">140</span>
+                </div>
+
+                <div class="submit">
+                    <input type="submit" value="Zarejestruj się">
+                </div>
             </div>
         </form>
     </div>
