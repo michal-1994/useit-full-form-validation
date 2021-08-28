@@ -9,10 +9,11 @@
 
     <link rel="stylesheet" href="./style/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 </head>
 <body>
     <div class="container">
-        <form action="/register" method="post">
+        <form action="/register" method="post" novalidate>
             <!-- First column -->
             <div class="col intro">
                 <img src="./assets/sign-form.png" alt="Formularz">
@@ -40,7 +41,7 @@
                 </div>
 
                 <div class="password part">
-                    <label for="conf-password" class="required">Hasło:</label>
+                    <label for="conf-password" class="required">Potwierdź hasło:</label>
                     <input type="password" name="conf-password" id="conf-password" required>
                 </div>
             </div>
@@ -53,15 +54,15 @@
                     <label for="birthday">Data urodzenia:</label>
                     <input type="date" name="birthday" id="birthday" placeholder="rrrr-mm-dd" required>
                     <div id="consent-container" class="hide">
-                        <input type="checkbox" name="parent-consent" id="parent-consent">
-                        <label for="parent-consent">Aby się zapisać, musisz mieć zgodę rodziców. Zaznacz to pole, jeśli zgadzasz się na zapisanie dziecka:</label>
+                        <input type="checkbox" name="parents-consent" id="parents-consent">
+                        <label for="parents-consent">Aby się zapisać, musisz mieć zgodę rodziców. Zaznacz to pole, jeśli zgadzasz się na zapisanie dziecka.</label>
                     </div>
                 </div>
 
                 <div class="bio part">
                     <label for="bio">Krótko o sobie (maksymalnie 140 znaków):</label>
                     <textarea maxlength="140" name="bio" id="bio" cols="30" rows="10"></textarea>
-                    <span id="bio" class="hide">140</span>
+                    <span id="bio-count">Zostało: 140 znaków</span>
                 </div>
 
                 <div class="submit">
@@ -71,6 +72,9 @@
         </form>
     </div>
     
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="./js/utilities.js"></script>
     <script src="./js/script.js"></script>
 </body>
 </html>

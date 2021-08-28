@@ -19,7 +19,8 @@ body {
   padding: 0 15px;
 }
 .col {
-  width: 31%;
+  width: 30%;
+  margin: 0 1%;
   padding: 25px;
   border: 10px solid white;
   background-color: #447add;
@@ -44,7 +45,7 @@ body {
 form {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
 }
 form label {
   width: 100%;
@@ -76,11 +77,29 @@ form textarea {
   resize: none;
 }
 #consent-container {
-  font-size: 10px;
+  font-size: 12px;
   margin-top: 8px;
 }
 .part {
   margin-bottom: 20px;
+}
+.error {
+  color: red;
+  display: inline-block;
+  width: 100%;
+  font-size: 14px;
+}
+.success {
+  border: 2px solid green !important;
+}
+.fail {
+  border: 2px solid red !important;
+}
+.hide {
+  display: none;
+}
+.show {
+  display: block;
 }
 @media (max-width: 920px) {
   .col {
